@@ -21,7 +21,26 @@ def myexp(x, N=10):
 
 if __name__ == "__main__":
 
-    print("Hello, world!")
+    ## PROBLEM 3 
+
+    print("Hello PSI 2026!")
+
+    import numpy 
+    print(numpy.e**1.2)
+
+    import matplotlib.pyplot as plt 
+    N = 1000 
+    x_data_list = [i*2*numpy.pi/N for i in range(N+1)]
+    x_data = numpy.array(x_data_list)
+    y_data_cos = numpy.cos(x_data)
+    y_data_sin = numpy.sin(x_data)
+    graph = plt.figure(figsize=(9,9), layout='tight')
+    plt.plot(x_data, y_data_cos, color="red", label="cos(x)")
+    plt.plot(x_data, y_data_sin, color="blue", label="sin(x)")
+    plt.legend()
+
+    plt.savefig("./PSI-Numerical-Methods-2026-Tutorial-1/trig.png", transparent=False)
+
 
     print("e(1) with  5 terms is", myexp(1.0, 5))
     print("e(1) with 10 terms is", myexp(1.0, 10))
